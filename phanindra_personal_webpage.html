@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5f5f7">
+<meta name="description" content="Phanindra Chandraprakash — Quality Engineering Leader working across automation, IoT, AI enablement, and product quality.">
+<title>Phanindra Chandraprakash — Quality, Systems & Product</title>
+<style>
+  :root {
+    --bg: #f5f5f7;
+    --surface: rgba(255,255,255,.78);
+    --white: #fff;
+    --ink: #1d1d1f;
+    --muted: #6e6e73;
+    --blue: #06c;
+    --line: rgba(0,0,0,.08);
+    --shadow: 0 18px 60px rgba(0,0,0,.06);
+    --radius: 28px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+  body {
+    margin: 0; color: var(--ink); background: var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased; line-height: 1.5;
+  }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .nav-wrap { position: sticky; top: 0; z-index: 20; background: rgba(250,250,252,.82); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,.08); }
+  nav { max-width: 1120px; min-height: 54px; padding: 0 24px; margin: auto; display:flex; align-items:center; justify-content:space-between; gap: 20px; }
+  .brand { font-size: 14px; font-weight: 650; letter-spacing: -.02em; color: var(--ink); white-space: nowrap; }
+  .nav-links { display:flex; gap: 24px; align-items:center; }
+  .nav-links a { font-size: 12px; color: var(--ink); opacity: .8; }
+  .nav-links a:hover { opacity: 1; text-decoration:none; }
+  .menu-toggle { display:none; background:none; border:0; font-size:22px; color:var(--ink); }
+  .hero { max-width: 1120px; padding: 94px 24px 70px; margin: auto; text-align:center; }
+  .eyebrow { color: var(--muted); text-transform: uppercase; letter-spacing: .16em; font-size: 11px; font-weight: 700; }
+  h1 { font-size: clamp(42px, 7vw, 82px); line-height: .99; letter-spacing: -.065em; margin: 18px auto 22px; max-width: 900px; font-weight: 720; }
+  .gradient { background: linear-gradient(105deg,#1d1d1f 8%,#626269 45%,#06c 95%); color: transparent; -webkit-background-clip:text; background-clip:text; }
+  .hero p { max-width: 690px; margin: 0 auto; color: var(--muted); font-size: clamp(17px,2.2vw,22px); letter-spacing:-.02em; }
+  .actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:30px; }
+  .button { display:inline-flex; align-items:center; justify-content:center; gap:8px; border-radius:999px; padding:12px 20px; font-size:14px; font-weight:600; transition: transform .2s, background .2s; }
+  .button:hover { transform: translateY(-2px); text-decoration:none; }
+  .primary { color:white; background:var(--blue); }
+  .primary:hover { background:#0077ed; }
+  .secondary { color:var(--blue); border:1px solid rgba(0,102,204,.25); background:rgba(255,255,255,.55); }
+  .section { max-width:1120px; padding: 26px 24px 64px; margin:auto; }
+  .section-heading { margin:0 0 24px; font-size: clamp(30px,4.4vw,48px); line-height:1.06; letter-spacing:-.055em; }
+  .section-sub { color:var(--muted); font-size:17px; margin:-12px 0 28px; max-width:700px; }
+  .grid { display:grid; gap:16px; }
+  .stats { grid-template-columns:repeat(4,1fr); }
+  .stat, .card { background:var(--white); border-radius:var(--radius); padding:26px; box-shadow:var(--shadow); }
+  .stat strong { display:block; font-size:clamp(30px,4vw,48px); letter-spacing:-.06em; line-height:1.1; }
+  .stat span { display:block; margin-top:10px; font-size:14px; color:var(--muted); }
+  .two-col { grid-template-columns:1.05fr .95fr; }
+  .card h3 { font-size:22px; letter-spacing:-.035em; margin:0 0 12px; }
+  .card p { color:var(--muted); margin:0 0 12px; }
+  .card p:last-child { margin-bottom:0; }
+  .pill-list { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
+  .pill { border:1px solid var(--line); background:#f5f5f7; border-radius:999px; padding:7px 11px; color:#424245; font-size:12px; font-weight:550; }
+  .principles { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:16px; }
+  .principle { padding:22px; border-radius:22px; background:linear-gradient(145deg,#fff,#f0f4fb); }
+  .principle .symbol { font-size:25px; margin-bottom:12px; }
+  .principle h3 { margin:0 0 7px; font-size:17px; letter-spacing:-.025em; }
+  .principle p { margin:0; color:var(--muted); font-size:14px; }
+  .timeline { display:grid; gap:14px; }
+  .job { background:#fff; border-radius:24px; padding:25px 28px; display:grid; grid-template-columns: minmax(160px,.7fr) 1.3fr; gap:24px; box-shadow:var(--shadow); }
+  .job h3 { margin:0; font-size:19px; letter-spacing:-.035em; }
+  .job .role { font-weight:600; margin-top:5px; }
+  .job .meta { font-size:13px; color:var(--muted); margin-top:8px; }
+  .job ul { margin:0; padding-left:18px; color:#515156; }
+  .job li { margin:0 0 7px; }
+  .job li:last-child { margin-bottom:0; }
+  .education { grid-template-columns:repeat(2,1fr); }
+  .edu { display:flex; gap:15px; align-items:flex-start; }
+  .edu-icon { width:42px; height:42px; flex:0 0 42px; border-radius:13px; display:grid; place-items:center; background:#f1f6ff; color:var(--blue); font-size:20px; }
+  .edu h3 { font-size:17px; margin:0 0 4px; }
+  .edu p { margin:0; font-size:14px; }
+  .awards { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+  .award { display:flex; gap:15px; align-items:center; }
+  .award .symbol { font-size:27px; }
+  .award strong { display:block; }
+  .award span { color:var(--muted); font-size:13px; }
+  .contact { text-align:center; padding:74px 24px 80px; background:#fff; border-radius:36px; }
+  .contact h2 { font-size:clamp(36px,6vw,64px); line-height:1; letter-spacing:-.06em; margin:14px 0 18px; }
+  .contact p { color:var(--muted); max-width:570px; margin:0 auto; font-size:18px; }
+  .contact-links { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; margin-top:26px; }
+  footer { max-width:1120px; margin:auto; padding:28px 24px 38px; display:flex; justify-content:space-between; gap:15px; color:var(--muted); font-size:12px; }
+  .reveal { opacity:0; transform:translateY(18px); transition:opacity .65s ease, transform .65s ease; }
+  .reveal.visible { opacity:1; transform:translateY(0); }
+  @media (prefers-reduced-motion: reduce) { html{scroll-behavior:auto} .reveal{opacity:1;transform:none;transition:none} *{transition:none!important} }
+  @media (max-width:760px) {
+    nav { padding:0 18px; }
+    .menu-toggle { display:block; }
+    .nav-links { display:none; position:absolute; top:54px; left:0; right:0; padding:18px 24px 22px; background:rgba(250,250,252,.97); border-bottom:1px solid var(--line); flex-direction:column; align-items:flex-start; gap:16px; }
+    .nav-links.open { display:flex; }
+    .hero { padding:70px 20px 54px; }
+    .section { padding:22px 18px 45px; }
+    .stats { grid-template-columns:repeat(2,1fr); }
+    .two-col, .principles, .education, .awards { grid-template-columns:1fr; }
+    .job { grid-template-columns:1fr; gap:13px; padding:22px; }
+    .stat, .card { padding:22px; }
+    .contact { border-radius:26px; padding:58px 22px; }
+    footer { flex-direction:column; text-align:center; }
+  }
+</style>
+</head>
+<body>
+<header class="nav-wrap">
+  <nav aria-label="Main navigation">
+    <a class="brand" href="#top">Phanindra Chandraprakash</a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <div class="nav-links">
+      <a href="#about">About</a><a href="#impact">Impact</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="eyebrow">Quality Engineering · Systems Thinking · Product</div>
+    <h1>Making complex systems work <span class="gradient">beautifully.</span></h1>
+    <p>I'm Phanindra Chandraprakash — a quality engineering leader connecting software, hardware, networks, and people to build reliable products and better customer experiences.</p>
+    <div class="actions">
+      <a class="button primary" href="#experience">Explore my work <span aria-hidden="true">↘</span></a>
+      <a class="button secondary" href="https://www.linkedin.com/in/phani85" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+    </div>
+  </section>
+
+  <section class="section reveal" id="impact">
+    <div class="eyebrow">The impact</div>
+    <h2 class="section-heading">Quality you can measure.</h2>
+    <p class="section-sub">A career built around finding failure points early, simplifying engineering work, and turning insight into outcomes.</p>
+    <div class="grid stats">
+      <article class="stat"><strong>17+</strong><span>Years across quality engineering and product delivery</span></article>
+      <article class="stat"><strong>30–40%</strong><span>Of proposed B2B SaaS enhancements shipped quarterly at Packsize</span></article>
+      <article class="stat"><strong>80%</strong><span>Reduction in field escalations through on-site customer support</span></article>
+      <article class="stat"><strong>50%</strong><span>Improvement in test coverage in a payments platform role</span></article>
+    </div>
+  </section>
+
+  <section class="section reveal" id="about">
+    <div class="eyebrow">A systems-minded approach</div>
+    <h2 class="section-heading">Engineering depth.<br>Product perspective.</h2>
+    <div class="grid two-col">
+      <article class="card">
+        <h3>My story</h3>
+        <p>My career began in mechanical engineering and FEA simulation software, grew through payments platforms and healthcare data systems, and evolved into systems integration and test across complex packaging machines.</p>
+        <p>At Packsize, I partner with Product, UX, Sales, Data Science, and Marketing to turn market insights into actionable user stories, edge cases, and shipped improvements. I'm also growing toward Product Management while continuing to lead with technical quality and test rigor.</p>
+      </article>
+      <article class="card">
+        <h3>What I bring</h3>
+        <p>Systems-level thinking across software, hardware, and networks; a quality-first lens; technical fluency in APIs, SQL, automation, and cloud infrastructure; and cross-functional leadership that turns complexity into decisions.</p>
+        <div class="pill-list">
+          <span class="pill">Test automation</span><span class="pill">IoT troubleshooting</span><span class="pill">Product discovery</span><span class="pill">AI knowledge agents</span><span class="pill">Root-cause analysis</span><span class="pill">Regulated systems</span>
+        </div>
+      </article>
+    </div>
+    <div class="principles">
+      <article class="principle"><div class="symbol">⌘</div><h3>Connect the layers</h3><p>Bridge software, hardware, networks, and teams so complex systems behave as one.</p></article>
+      <article class="principle"><div class="symbol">◎</div><h3>Find the edge cases</h3><p>Surface risk early with thoughtful test strategy, automation, and root-cause analysis.</p></article>
+      <article class="principle"><div class="symbol">↗</div><h3>Turn insight into impact</h3><p>Translate customer and market needs into requirements and product improvements that ship.</p></article>
+    </div>
+  </section>
+
+  <section class="section reveal" id="experience">
+    <div class="eyebrow">Career highlights</div>
+    <h2 class="section-heading">Experience that connects the dots.</h2>
+    <p class="section-sub">From simulation software to payments, healthcare platforms, and connected manufacturing systems.</p>
+    <div class="timeline">
+      <article class="job">
+        <div><h3>Packsize</h3><div class="role">Senior Automation Engineer</div><div class="meta">Sep 2019 – Present · Salt Lake City area</div></div>
+        <ul><li>Partner with Product, Engineering, Sales, and Marketing; help ship 30–40% of proposed enhancements to production each quarter.</li><li>Expanded quality engineering into IoT and software troubleshooting, resolving 75% of escalations and reducing overall volume by 30%.</li><li>Reduced field escalations by 80% through on-site customer support and delivered a 10% gain in manufacturing quality.</li><li>Build reusable automation and PowerShell utilities; contribute to AI knowledge retrieval, diagnostics, and visual identification initiatives.</li></ul>
+      </article>
+      <article class="job">
+        <div><h3>Progressive Leasing</h3><div class="role">QA Automation Engineer</div><div class="meta">Sep 2018 – Sep 2019 · Greater Salt Lake City</div></div>
+        <ul><li>Reached 35% sprint-backlog automation coverage within three months and improved framework performance by 27%.</li><li>Led a payment-processing migration from Authorize.net to First Data with no disruption to payment workflows.</li><li>Reworked test strategy across Unit, Integration, and API layers and piloted a Jenkins-to-Azure CI/CD migration.</li></ul>
+      </article>
+      <article class="job">
+        <div><h3>Illinois Institute of Technology</h3><div class="role">Graduate Student Assistant</div><div class="meta">Aug 2017 – May 2018 · Chicago</div></div>
+        <ul><li>Unblocked an Oracle FAMIS implementation, enabling deployment across 10 machines in three hours and saving two days on migration.</li><li>Improved test coverage by 20%, optimized SQL reporting by 4.5 seconds per report, and documented data-validation best practices.</li></ul>
+      </article>
+      <article class="job">
+        <div><h3>IMS Health</h3><div class="role">Senior Engineer</div><div class="meta">Jul 2014 – Aug 2016 · Bengaluru</div></div>
+        <ul><li>Produced requirements, use cases, functional specifications, and UML behavior diagrams to align product and engineering teams.</li><li>Led Salesforce-to-Cegedim CRM ETL migration validation and test automation architecture with Selenium WebDriver, Jenkins, and TestNG.</li><li>Contributed to 10 successful mobile and web application launches and improved delivery through defect metrics and test estimation.</li></ul>
+      </article>
+      <article class="job">
+        <div><h3>Symphony Teleca</h3><div class="role">Senior Product Engineer</div><div class="meta">Oct 2010 – Jul 2014 · Bengaluru</div></div>
+        <ul><li>Applied SEPA and SWIFT payment-domain knowledge to identify requirement defects and pre-validate payment messages.</li><li>Improved test coverage by 50%, saved 1.5 days per testing cycle, and led a four-person team supporting iOS and Android testing.</li><li>Trained 30 engineers on electronic payment systems and SDLC practices, reaching 85% onboarding success within 10 days.</li></ul>
+      </article>
+      <article class="job">
+        <div><h3>The Athene Group</h3><div class="role">QA Engineer</div><div class="meta">Jul 2010 – Oct 2010 · Bengaluru</div></div>
+        <ul><li>Supported the move from Waterfall to V-model SDLC and improved requirements traceability.</li><li>Helped reduce defect-reporting time by 58% through adoption of a redesigned defect tracking process and Mantis.</li></ul>
+      </article>
+      <article class="job">
+        <div><h3>Advanced Forming Technology Center</h3><div class="role">Senior Application Engineer</div><div class="meta">Jul 2007 – Jun 2010 · Bengaluru</div></div>
+        <ul><li>Owned quality and release readiness for DEFORM FEA simulation software across Preprocessor, Simulator, and Postprocessor modules.</li><li>Validated Linux compatibility, licensing, 2D/3D mesh performance, and manufacturing workflows; developed help and e-learning content.</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section reveal" id="education">
+    <div class="eyebrow">Learning & credentials</div>
+    <h2 class="section-heading">A foundation built across disciplines.</h2>
+    <div class="grid education">
+      <article class="card edu"><div class="edu-icon">⌘</div><div><h3>Illinois Institute of Technology</h3><p>Master’s Degree, Information Technology and Management · 2016–2018</p><p>GPA: 3.8 · Management Information Systems</p></div></article>
+      <article class="card edu"><div class="edu-icon">⚙</div><div><h3>Visvesvaraya Technological University</h3><p>Bachelor of Engineering, Mechanical Engineering · 2003–2007</p></div></article>
+      <article class="card edu"><div class="edu-icon">✦</div><div><h3>Indian Institute of Science</h3><p>Proficiency Course, Innovative Product Development & Design Methods · 2010</p></div></article>
+      <article class="card edu"><div class="edu-icon">↗</div><div><h3>M.S. Ramaiah School of Advanced Studies</h3><p>Proficiency Course, Alternative Propulsion System · 2009–2010</p></div></article>
+    </div>
+    <div class="grid awards" style="margin-top:16px">
+      <article class="card award"><div class="symbol">🏆</div><div><strong>Hall of Fame Award</strong><span>Recognition for contribution and impact</span></div></article>
+      <article class="card award"><div class="symbol">🛡</div><div><strong>Security Champion</strong><span>Security-minded engineering and delivery</span></div></article>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <h3>Certifications & product learning</h3>
+      <div class="pill-list"><span class="pill">ISTQB Certified</span><span class="pill">Digital Adoption Super Certified</span><span class="pill">Product-Led Certified</span><span class="pill">Explore a Career in Product Management</span><span class="pill">TestComplete</span><span class="pill">Automation Engineering</span></div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="contact">
+    <div class="contact">
+      <div class="eyebrow">Let’s build what’s next</div>
+      <h2>Good products start<br>with good questions.</h2>
+      <p>Open to connecting with teams that value technical depth, product instinct, thoughtful quality engineering, and customer-centered problem solving.</p>
+      <div class="contact-links">
+        <a class="button primary" href="mailto:phanindra.chandraprakash@gmail.com">Email me ↗</a>
+        <a class="button secondary" href="https://www.linkedin.com/in/phani85" target="_blank" rel="noopener noreferrer">LinkedIn profile ↗</a>
+      </div>
+      <p style="font-size:14px;margin-top:22px"><a href="tel:+13123839715">+1 (312) 383-9715</a> · Herriman, Utah, United States</p>
+    </div>
+  </section>
+</main>
+
+<footer><span>© <span id="year"></span> Phanindra Chandraprakash</span><span>Designed with clarity, care, and a little less noise.</span></footer>
+<script>
+  const menuButton = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  menuButton.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.textContent = open ? '×' : '☰';
+  });
+  navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.textContent = '☰';
+  }));
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
