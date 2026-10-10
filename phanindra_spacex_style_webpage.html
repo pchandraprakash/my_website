@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050505">
+<meta name="description" content="Phanindra Chandraprakash — Quality Engineering Leader connecting automation, IoT, AI enablement, and product outcomes.">
+<title>Phanindra Chandraprakash | Engineering Beyond Boundaries</title>
+<style>
+:root{--black:#050505;--white:#f7f7f7;--muted:#a4a4a4;--line:rgba(255,255,255,.18);--blue:#83b8ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}a:hover{opacity:.75}
+.nav{position:fixed;z-index:20;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:24px 5.5%;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(0,0,0,.82);backdrop-filter:blur(12px);border-color:var(--line)}
+.wordmark{font-size:17px;font-weight:800;letter-spacing:.19em;text-transform:uppercase;white-space:nowrap}
+.navlinks{display:flex;gap:28px;align-items:center}
+.navlinks a{font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+.menu{display:none;background:transparent;color:white;border:0;font-size:25px;cursor:pointer}
+.hero{min-height:100svh;position:relative;display:flex;align-items:flex-end;overflow:hidden;padding:150px 8% 11vh;background:radial-gradient(ellipse at 75% 30%,#252a31 0%,#111418 28%,#070809 62%,#000 100%)}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.08) 75%),linear-gradient(0deg,#050505 0%,transparent 45%);pointer-events:none}
+.orbit{position:absolute;width:min(65vw,760px);aspect-ratio:1;border:1px solid rgba(255,255,255,.11);border-radius:50%;right:3%;top:7%;transform:rotate(-22deg)}
+.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.09);border-radius:50%;inset:10% -7%;transform:rotate(38deg)}
+.orbit:after{inset:24% -15%;transform:rotate(-51deg)}
+.hero-content{position:relative;z-index:1;max-width:900px}
+.kicker{font-size:10px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:#c8c8c8}
+h1{font-size:clamp(48px,9.4vw,130px);line-height:.88;letter-spacing:-.065em;text-transform:uppercase;margin:24px 0 28px;font-weight:800;max-width:1050px}
+.hero p{font-size:clamp(15px,1.7vw,20px);line-height:1.7;color:#c4c4c4;max-width:560px;margin:0}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border:1px solid rgba(255,255,255,.7);font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;transition:background .25s,color .25s}
+.btn:hover{opacity:1;background:white;color:black}
+.scroll-note{position:absolute;right:5.5%;bottom:10vh;writing-mode:vertical-rl;color:#999;font-size:9px;letter-spacing:.22em;text-transform:uppercase}
+.section{padding:110px 8%;max-width:1500px;margin:0 auto}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:25px;margin-bottom:40px}
+.section-label{color:#999;font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:700}
+h2{font-size:clamp(34px,5.7vw,72px);line-height:.98;letter-spacing:-.055em;text-transform:uppercase;margin:16px 0 0;max-width:800px}
+.intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+.panel{border:1px solid var(--line);padding:32px;background:linear-gradient(135deg,rgba(255,255,255,.055),rgba(255,255,255,.012))}
+.panel h3{font-size:19px;letter-spacing:.01em;text-transform:uppercase;margin:0 0 18px}
+.panel p{color:#b8b8b8;font-size:14px;line-height:1.85;margin:0 0 14px}
+.panel p:last-child{margin-bottom:0}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:30px 22px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat strong{display:block;font-size:clamp(30px,4.4vw,56px);font-weight:500;letter-spacing:-.06em}
+.stat span{display:block;color:#aaa;font-size:10px;line-height:1.6;letter-spacing:.11em;text-transform:uppercase;margin-top:12px}
+.focus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.focus{background:#080808;padding:30px;min-height:210px}
+.focus .number{color:#777;font-size:11px;letter-spacing:.18em}
+.focus h3{font-size:18px;text-transform:uppercase;letter-spacing:-.02em;margin:30px 0 12px}
+.focus p{font-size:13px;line-height:1.8;color:#aaa;margin:0}
+.timeline{border-top:1px solid var(--line)}
+.job{display:grid;grid-template-columns:.7fr 1.3fr;gap:50px;padding:32px 0;border-bottom:1px solid var(--line)}
+.job-meta{color:#999;font-size:10px;line-height:1.8;letter-spacing:.12em;text-transform:uppercase}
+.job h3{font-size:21px;letter-spacing:-.025em;text-transform:uppercase;margin:0 0 8px}
+.job .role{font-size:13px;color:#bbb;margin-bottom:15px}
+.job ul{padding-left:17px;margin:0;color:#bdbdbd;font-size:13px;line-height:1.85}
+.job li{padding-left:4px;margin-bottom:6px}
+.edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.edu{border:1px solid var(--line);padding:25px}
+.edu .type{font-size:9px;color:#888;letter-spacing:.17em;text-transform:uppercase}
+.edu h3{font-size:16px;text-transform:uppercase;line-height:1.4;margin:12px 0 8px}
+.edu p{font-size:12px;color:#aaa;line-height:1.7;margin:0}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.tag{border:1px solid #3c3c3c;color:#ccc;padding:8px 11px;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+.awards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+.award{padding:22px;border:1px solid var(--line);display:flex;gap:16px;align-items:center}
+.award-mark{font-size:24px;color:#ddd}
+.award strong{display:block;text-transform:uppercase;font-size:12px;letter-spacing:.07em}
+.award span{display:block;color:#999;font-size:11px;margin-top:6px}
+.contact{min-height:70vh;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:110px 8%;background:linear-gradient(180deg,#050505,#101216 58%,#050505);border-top:1px solid var(--line)}
+.contact h2{font-size:clamp(44px,8vw,105px);max-width:950px}
+.contact p{max-width:550px;color:#aaa;line-height:1.8;font-size:15px;margin:25px 0}
+.contact-links{display:flex;flex-wrap:wrap;gap:12px}
+.contact-small{font-size:11px!important;color:#777!important;margin-top:24px!important}
+footer{padding:25px 5.5%;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:#777;font-size:9px;letter-spacing:.12em;text-transform:uppercase}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+@media(max-width:800px){
+ .nav{padding:18px 5%}.wordmark{font-size:12px;letter-spacing:.12em}.menu{display:block}
+ .navlinks{display:none;position:absolute;top:62px;left:0;right:0;padding:24px 5%;background:rgba(0,0,0,.97);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:22px}
+ .navlinks.open{display:flex}.hero{padding:130px 6% 100px;min-height:92svh}.orbit{width:95vw;right:-28%;top:10%}.scroll-note{display:none}
+ .section{padding:75px 6%}.intro-grid{grid-template-columns:1fr}.stat-grid{grid-template-columns:repeat(2,1fr)}
+ .stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+ .focus-grid{grid-template-columns:1fr}.focus{min-height:auto}.focus h3{margin-top:18px}
+ .job{grid-template-columns:1fr;gap:15px}.edu-grid,.awards{grid-template-columns:1fr}
+ .contact{padding:85px 6%;min-height:60vh}footer{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+<header class="nav" id="nav">
+  <a class="wordmark" href="#top">Phanindra Chandraprakash</a>
+  <button class="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <nav class="navlinks" aria-label="Main navigation">
+    <a href="#mission">Profile</a><a href="#impact">Impact</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="orbit" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="kicker">Quality Engineering · Automation · IoT · AI Enablement</div>
+      <h1>Engineering<br>What’s Next.</h1>
+      <p>Connecting software, hardware, networks, and people to make complex products more reliable — and transform technical insight into meaningful product outcomes.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#experience">Explore the mission ↓</a>
+        <a class="btn" href="https://www.linkedin.com/in/phani85" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+      </div>
+    </div>
+    <div class="scroll-note">Scroll to explore</div>
+  </section>
+
+  <section class="section reveal" id="mission">
+    <div class="section-head"><div><div class="section-label">01 / Profile</div><h2>A systems thinker.<br>A quality-first leader.</h2></div></div>
+    <div class="intro-grid">
+      <article class="panel">
+        <h3>From engineering to product impact</h3>
+        <p>With 17+ years at the intersection of quality engineering and product strategy, I turn ambiguous requirements into shipped features and shipped features into measurable outcomes.</p>
+        <p>My path spans mechanical engineering and FEA simulation software, payments platforms, healthcare data systems, and systems integration and testing for complex packaging machines. At Packsize, I work across Product, UX, Sales, Data Science, and Marketing to turn market insight into user stories and edge cases that ship.</p>
+        <p>I'm actively growing into Product Management roles while continuing to bring rigor to technical quality, automation, and test leadership.</p>
+      </article>
+      <article class="panel">
+        <h3>Operating principles</h3>
+        <p><strong>01 — See the whole system.</strong> Bridge software, hardware, networks, and the teams behind them.</p>
+        <p><strong>02 — Find failure early.</strong> Use strong test strategy and root-cause analysis to prevent customer issues.</p>
+        <p><strong>03 — Translate complexity.</strong> Make technical details actionable for engineering, product, and business teams.</p>
+        <p><strong>04 — Build for trust.</strong> Apply quality and compliance experience across financial services and healthcare data.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section reveal" id="impact">
+    <div class="section-head"><div><div class="section-label">02 / Measurable outcomes</div><h2>Performance<br>in the numbers.</h2></div></div>
+    <div class="stat-grid">
+      <div class="stat"><strong>17+</strong><span>Years of engineering and delivery experience</span></div>
+      <div class="stat"><strong>30–40%</strong><span>Of proposed B2B SaaS enhancements shipped quarterly at Packsize</span></div>
+      <div class="stat"><strong>80%</strong><span>Reduction in field escalations through on-site customer support</span></div>
+      <div class="stat"><strong>50%</strong><span>Test coverage improvement in payments engineering</span></div>
+    </div>
+    <div class="focus-grid" style="margin-top:22px">
+      <article class="focus"><div class="number">CAPABILITY / 01</div><h3>Automation at scale</h3><p>Reusable automation frameworks, Selenium, Cypress, Playwright, PowerShell tooling, CI/CD integration, and layered testing strategy.</p></article>
+      <article class="focus"><div class="number">CAPABILITY / 02</div><h3>Connected systems</h3><p>Cross-layer troubleshooting across IoT, software, hardware, network performance, manufacturing workflows, and customer escalations.</p></article>
+      <article class="focus"><div class="number">CAPABILITY / 03</div><h3>Product & AI enablement</h3><p>Requirements, customer insights, edge cases, AI knowledge retrieval, diagnostics, visual identification, and cross-functional product delivery.</p></article>
+    </div>
+  </section>
+
+  <section class="section reveal" id="experience">
+    <div class="section-head"><div><div class="section-label">03 / Career timeline</div><h2>Built across<br>industries.</h2></div></div>
+    <div class="timeline">
+      <article class="job"><div><div class="job-meta">Sep 2019 — Present<br>Salt Lake City Metropolitan Area</div><h3>Packsize</h3><div class="role">Senior Automation Engineer</div></div><ul><li>Partnered across Product, Engineering, Sales, and Marketing; 30–40% of suggested enhancements reach production each quarter.</li><li>Led quality engineering's expansion into IoT/software troubleshooting, resolving 75% of escalations and reducing overall volume by 30%.</li><li>Reduced field escalations by 80% through on-site customer support and delivered a 10% gain in manufacturing quality.</li><li>Built automation frameworks and PowerShell utilities; contributed to AI knowledge retrieval, diagnostics, and visual identification initiatives.</li></ul></article>
+      <article class="job"><div><div class="job-meta">Sep 2018 — Sep 2019<br>Greater Salt Lake City Area</div><h3>Progressive Leasing</h3><div class="role">QA Automation Engineer</div></div><ul><li>Reached 35% automation coverage of the sprint backlog in three months and improved framework performance by 27%.</li><li>Led payment processing migration from Authorize.net to First Data with zero disruption to payment workflows.</li><li>Reclassified test strategy into Unit, Integration, and API layers and piloted a Jenkins-to-Azure CI/CD migration.</li></ul></article>
+      <article class="job"><div><div class="job-meta">Aug 2017 — May 2018<br>Chicago, Illinois</div><h3>Illinois Institute of Technology</h3><div class="role">Graduate Student Assistant</div></div><ul><li>Resolved an Oracle FAMIS implementation blocker, enabling deployment across 10 machines in three hours and saving two days on migration.</li><li>Improved test coverage by 20%, optimized SQL reporting by 4.5 seconds per report, and authored data-validation best practices.</li></ul></article>
+      <article class="job"><div><div class="job-meta">Jul 2014 — Aug 2016<br>Bengaluru, India</div><h3>IMS Health</h3><div class="role">Senior Engineer</div></div><ul><li>Authored BRDs, FRDs, use cases, functional specifications, and UML behavior diagrams.</li><li>Led Salesforce-to-Cegedim CRM ETL migration validation and automation architecture using Selenium WebDriver, Jenkins, and TestNG.</li><li>Contributed to 10 successful mobile and web application launches and improved delivery through defect metrics and test estimation.</li></ul></article>
+      <article class="job"><div><div class="job-meta">Oct 2010 — Jul 2014<br>Bengaluru, India</div><h3>Symphony Teleca</h3><div class="role">Senior Product Engineer</div></div><ul><li>Applied SEPA SDD/SCT and SWIFT payment-domain knowledge to catch requirement defects and pre-validate messages.</li><li>Improved test coverage by 50%, saving 1.5 days per testing cycle; built and led a four-person mobile testing team.</li><li>Trained 30 engineers on UK Electronic Payment Systems and SDLC methodologies, achieving 85% onboarding success within 10 days.</li></ul></article>
+      <article class="job"><div><div class="job-meta">Jul 2010 — Oct 2010<br>Bengaluru, India</div><h3>The Athene Group</h3><div class="role">QA Engineer</div></div><ul><li>Supported transition from Waterfall to V-model SDLC, improving requirements traceability and quality risk management.</li><li>Helped cut defect reporting time by 58%, from approximately 12 minutes to five, through Mantis adoption and improved templates.</li><li>Coordinated production data migration validation during disaster recovery testing.</li></ul></article>
+      <article class="job"><div><div class="job-meta">Jul 2007 — Jun 2010<br>Bengaluru, India</div><h3>Advanced Forming Technology Center</h3><div class="role">Senior Application Engineer</div></div><ul><li>Led quality and release readiness for DEFORM FEA simulation software across Preprocessor, Simulator, and Postprocessor modules.</li><li>Validated Linux compatibility, licensing, 2D/3D mesh performance, and manufacturing workflows across hardware and OS configurations.</li><li>Created system help manual frameworks and e-learning content to reduce engineering support burden.</li></ul></article>
+    </div>
+  </section>
+
+  <section class="section reveal" id="education">
+    <div class="section-head"><div><div class="section-label">04 / Education & recognition</div><h2>Curiosity is<br>part of the craft.</h2></div></div>
+    <div class="edu-grid">
+      <article class="edu"><div class="type">Master's degree · 2016–2018</div><h3>Illinois Institute of Technology</h3><p>Information Technology and Management · Management Information Systems · GPA 3.8</p></article>
+      <article class="edu"><div class="type">Bachelor's degree · 2003–2007</div><h3>Visvesvaraya Technological University</h3><p>Bachelor of Engineering · Mechanical Engineering</p></article>
+      <article class="edu"><div class="type">Proficiency course · 2010</div><h3>Indian Institute of Science</h3><p>Innovative Product Development & Design Methods</p></article>
+      <article class="edu"><div class="type">Proficiency course · 2009–2010</div><h3>M.S. Ramaiah School of Advanced Studies</h3><p>Alternative Propulsion System</p></article>
+      <article class="edu"><div class="type">Pre-university · 2001–2003</div><h3>Government Pre-University College, Kolar</h3><p>Class 12 · PCMB</p></article>
+    </div>
+    <div class="awards">
+      <article class="award"><div class="award-mark">✦</div><div><strong>Hall of Fame Award</strong><span>Professional recognition</span></div></article>
+      <article class="award"><div class="award-mark">◈</div><div><strong>Security Champion</strong><span>Security-minded engineering</span></div></article>
+    </div>
+    <div class="tags">
+      <span class="tag">ISTQB Certified</span><span class="tag">TestComplete</span><span class="tag">Automation Engineering</span><span class="tag">Digital Adoption Super Certified</span><span class="tag">Product-Led Certified</span><span class="tag">Product Management Learning</span><span class="tag">SEPA</span><span class="tag">SWIFT</span><span class="tag">PCI-DSS</span><span class="tag">HIPAA</span>
+    </div>
+  </section>
+
+  <section class="contact reveal" id="contact">
+    <div class="section-label">05 / Establish contact</div>
+    <h2>Let’s make<br>the next thing<br>work better.</h2>
+    <p>Open to connecting with teams that value technical depth, product instinct, quality engineering, and customer-centered problem solving.</p>
+    <div class="contact-links">
+      <a class="btn" href="mailto:phanindra.chandraprakash@gmail.com">Email Phanindra ↗</a>
+      <a class="btn" href="https://www.linkedin.com/in/phani85" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    </div>
+    <p class="contact-small">Herriman, Utah, United States<br><a href="tel:+13123839715">+1 (312) 383-9715</a></p>
+  </section>
+</main>
+<footer><span>© <span id="year"></span> Phanindra Chandraprakash</span><span>Quality · Systems · Product</span></footer>
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>30),{passive:true});
+const menu=document.querySelector('.menu'),links=document.querySelector('.navlinks');
+menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰';});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';}));
+document.getElementById('year').textContent=new Date().getFullYear();
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
